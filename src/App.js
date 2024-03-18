@@ -1,5 +1,3 @@
-// client/src/App.js
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
@@ -42,7 +40,7 @@ function App() {
       />
       <button onClick={addTodo}>Add Todo</button>
       <ul>
-        {todos.map(todo => (
+        {todos.length > 0 && todos.map(todo => (
           <li key={todo._id}>{todo.text}</li>
         ))}
       </ul>
@@ -51,4 +49,3 @@ function App() {
 }
 
 export default App;
-// http://localhost:5000
